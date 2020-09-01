@@ -38,7 +38,7 @@ Direct mapping of the RNA-seq reads for the four *Daphnia melanica* genotypes to
 | R2 | Visible light | 3 |
 | R2 | UVR | 3 |
 
-2. The well annotated PA42 *Daphnia pulex* reference genome and coding sequences
+2. The well annotated PA42 *Daphnia pulex* reference coding sequences
 
 ## Question Asked
 How do divergent adaptive phenotypes arise in naturally subdivided populations of *Daphnia*?
