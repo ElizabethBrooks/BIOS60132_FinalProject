@@ -26,6 +26,7 @@ Direct mapping of the RNA-seq reads for the four *Daphnia melanica* genotypes to
 
 ## Data Used
 1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes (Olympic mountains, WA), two tolerant and two not-tolerant to UVR
+
 | Genotype | Treatment | Replicates |
 | -------- | --------- | ---------- |
 | E05 | UVR | 3 |
