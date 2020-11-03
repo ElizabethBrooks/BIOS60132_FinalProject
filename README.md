@@ -35,8 +35,8 @@ Direct mapping of the RNA-seq reads for the four *Daphnia melanica* genotypes to
 | Y05 | Visible light | 3 |
 | Y023_5 | UVR | 3 |
 | Y023_5 | Visible light | 3 |
-| R2 | Visible light | 3 |
 | R2 | UVR | 3 |
+| R2 | Visible light | 3 |
 
 2. The well annotated PA42 *Daphnia pulex* reference coding sequences
 
