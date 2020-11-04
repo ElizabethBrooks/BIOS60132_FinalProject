@@ -16,46 +16,51 @@ using CSV
 using PhyloNetworks
 
 #Retrieve inputs
-sketchSize=parse(Int, ARGS[1])
-merSize=parse(Int, ARGS[2])
+merSize=parse(Int, ARGS[1])
+sketchSize=parse(Int, ARGS[2])
 inputNames=ARGS[3]
 outputDist=ARGS[4]
 outputPhylo=ARGS[5]
 
 #Retrieve species list
-nameList=CSV.read(inputNames, DataFrame, header=false)
-names=convert(Matrix, nameList)
-numSpecies=length(names)
+nameDF=CSV.read(inputNames, DataFrame, header=false)
+nameMatrix=convert(Matrix, nameDF)
+numSpecies=size(nameMatrix, 1)
 
 #Initialize data vectors
 readList=Array{BioSequences.FASTA.Reader}(undef,numSpecies)
 sketchList=Array{MinHashSketch}(undef,numSpecies)
+names=Array{String}(undef,numSpecies)
 distMat=zeros(numSpecies,numSpecies)
 
 #Sketch FASTA files
 for i in 1:numSpecies
 	#Read input FASTA files
-	println("Reading FASTA file ", names[i,2])
-	reads=open(FASTA.Reader, names[i,2])
+	println("Reading FASTA file ", nameMatrix[i,2])
+	reads=open(FASTA.Reader, nameMatrix[i,2])
 	readList[i]=reads
 	#Generate MinHash sketches for each species
-	println("Generating MinHash sketch for ", names[i,1])
+	println("Generating MinHash sketch for ", nameMatrix[i,1])
 	sketch=minhash(reads, merSize, sketchSize)
 	sketchList[i]=sketch
+	#Create name vector for header
+	names[i]=nameMatrix[i,1]
 end
 
 #Calculate pair-wise Jaccard distances
+println("Calculating Jaccard distances...")
 for i in 1:numSpecies
 	for j in 1:numSpecies
 		if i < j
 			#Determine jaccard distance
-			println("Calculating Jaccard distance for ", names[i,1])
 			dist=distance(Jaccard, sketchList[i], sketchList[j])
-			global distMat[i,j]=dist
-			global distMat[j,i]=dist
+			distMat[i,j]=1-dist
+			distMat[j,i]=1-dist
 		end
 	end
 end
+#Print distance matrix to screen
+distMat
 
 #Output distance matrix to CSV
 println("Writting distance matrix to CSV...")
@@ -66,6 +71,8 @@ CSV.write(outputDist, distDF, header=names)
 println("Inferring phylogenetic tree...")
 distCSV=CSV.read(outputDist, DataFrame, header=true)
 resultTree=nj(distCSV)
+#Print tree to screen
+resultTree
 
 #Write tree to text file
 io=open(outputPhylo, "w")
