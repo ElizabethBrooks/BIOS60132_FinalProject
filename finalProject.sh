@@ -11,8 +11,8 @@ merSize=16
 sketchSize=400
 inputNames="speciesList.csv"
 outputDist="distanceMatrix.csv"
-outputPhylo="phylogeneticTree.txt"
+outputPhylo="treeNetwork.txt"
 outputTopo="treeTopology.txt"
 
 #Run julia script
-julia ./sequenceDistance_phylogeny.jl $merSize $sketchSize $inputNames $outputDist $outputPhylo
+julia ./sequenceDistance_phylogeny.jl $merSize $sketchSize $inputNames $outputDist $outputPhylo $outputTopo
