@@ -20,8 +20,10 @@ across the genus.
 Direct mapping of the RNA-seq reads for the four *Daphnia melanica* genotypes to the reference coding sequences of the closely related species of *Daphnia pulex* to guide the generation of phylogenetic trees.
 
 ## Activities Required
-1. QC and trim RNA-seq reads
+1. QC, trim, and concatenate paired-end RNA-seq reads
 2. Directly map the RNA-seq reads to the PA42 reference coding sequences
+-- Generate MinHash sketches of sequences
+-- Calculate sequence distances
 3. Infer phylogenetic trees
 
 ## Data Used
