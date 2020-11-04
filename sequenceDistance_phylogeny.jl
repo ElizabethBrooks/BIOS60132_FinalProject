@@ -21,6 +21,7 @@ sketchSize=parse(Int, ARGS[2])
 inputNames=ARGS[3]
 outputDist=ARGS[4]
 outputPhylo=ARGS[5]
+outputTopo=ARGS[6]
 
 #Retrieve species list
 nameDF=CSV.read(inputNames, DataFrame, header=false)
@@ -59,8 +60,6 @@ for i in 1:numSpecies
 		end
 	end
 end
-#Print distance matrix to screen
-distMat
 
 #Output distance matrix to CSV
 println("Writting distance matrix to CSV...")
@@ -71,10 +70,13 @@ CSV.write(outputDist, distDF, header=names)
 println("Inferring phylogenetic tree...")
 distCSV=CSV.read(outputDist, DataFrame, header=true)
 resultTree=nj(distCSV)
-#Print tree to screen
-resultTree
 
 #Write tree to text file
 io=open(outputPhylo, "w")
 println(io, resultTree)
+close(io)
+
+#Write topology to text file
+io=open(outputTopo, "w")
+resultNet=writeTopology(resultTree)
 close(io)

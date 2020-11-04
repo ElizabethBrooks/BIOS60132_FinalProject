@@ -9,9 +9,10 @@ module load julia/1.4.1
 #Set inputs
 merSize=16
 sketchSize=400
-inputNames="speciesList.txt"
-outputDist="distanceMatrix.txt"
+inputNames="speciesList.csv"
+outputDist="distanceMatrix.csv"
 outputPhylo="phylogeneticTree.txt"
+outputTopo="treeTopology.txt"
 
 #Run julia script
 julia ./sequenceDistance_phylogeny.jl $merSize $sketchSize $inputNames $outputDist $outputPhylo
