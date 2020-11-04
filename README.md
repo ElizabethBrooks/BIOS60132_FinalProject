@@ -21,8 +21,8 @@ Direct mapping of the RNA-seq reads for the four *Daphnia melanica* genotypes to
 
 ## Activities Required
 1. QC, trim, and concatenate paired-end RNA-seq reads for each species
-2. Directly map the RNA-seq reads to the PA42 reference coding sequences using MinHash sketches
-3. Infer phylogenetic trees using neighbor joining of pair-wise distance matrix of sketches
+2. Directly map the RNA-seq reads to the PA42 reference using MinHash sketches
+3. Infer phylogenetic trees using neighbor joining of pair-wise distance matrix for sketches
 
 ## Data Used
 1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes (Olympic mountains, WA), two tolerant and two not-tolerant to UVR
