@@ -21,9 +21,7 @@ Direct mapping of the RNA-seq reads for the four *Daphnia melanica* genotypes to
 
 ## Activities Required
 1. QC, trim, and concatenate paired-end RNA-seq reads
-2. Directly map the RNA-seq reads to the PA42 reference coding sequences
--- Generate MinHash sketches of sequences
--- Calculate sequence distances
+2. Directly map the RNA-seq reads to the PA42 reference coding sequences using MinHash sketches
 3. Infer phylogenetic trees
 
 ## Data Used
