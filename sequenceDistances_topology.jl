@@ -8,6 +8,7 @@
 #Pkg.add("PhyloNetworks")
 #Pkg.add("Clustering")
 #Pkg.add("PhyloTrees")
+#Pkg.add("StatsPlots")
 #Pkg.add("Plots")
 
 #Ensure GR run-time is up-to-date, if necessary
@@ -23,6 +24,7 @@ using CSV
 using PhyloNetworks
 using Clustering
 using PhyloTrees
+using StatsPlots
 using Plots
 plotly()
 
