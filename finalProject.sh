@@ -15,9 +15,10 @@ target=$3 #genomic or rna
 merSize=16
 sketchSize=400
 inputNames=$target"List.csv"
-outputDist="../Data/Results_FinalProject/distanceMatrix_"$target"_k"$merSize"s"$sketchSize".csv"
-outputPhylo="../Data/Results_FinalProject/treeNetwork_"$target"_k"$merSize"s"$sketchSize".txt"
-outputTopo="../Data/Results_FinalProject/treeTopology_"$target"_k"$merSize"s"$sketchSize".txt"
+outputsPath="../Data/Results_FinalProject/run3/"$target"_k"$merSize"s"$sketchSize
+
+#Make outputs directory
+mkdir $outputsPath
 
 #Run julia script
-julia ./sequenceDistances_topology.jl $merSize $sketchSize $inputNames $outputDist $outputPhylo $outputTopo
+julia ./sequenceDistances_topology.jl $merSize $sketchSize $inputNames $outputsPath

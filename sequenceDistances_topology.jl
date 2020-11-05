@@ -6,6 +6,9 @@
 #Pkg.add("DataFrames")
 #Pkg.add("CSV")
 #Pkg.add("PhyloNetworks")
+#Pkg.add("Clustering")
+#Pkg.add("PhyloTrees")
+#Pkg.add("StatsPlots")
 
 #Load packages
 println("Importing packages...")
@@ -14,14 +17,24 @@ using Bio.Var
 using DataFrames
 using CSV
 using PhyloNetworks
+using Clustering
+using PhyloTrees
+using StatsPlots
 
 #Retrieve inputs
 merSize=parse(Int, ARGS[1])
 sketchSize=parse(Int, ARGS[2])
 inputNames=ARGS[3]
-outputDist=ARGS[4]
-outputPhylo=ARGS[5]
-outputTopo=ARGS[6]
+outputsPath=ARGS[4]
+
+#Set output paths
+outputDist=outputsPath * "/distanceMatrix.csv"
+outputPhylo=outputsPath * "/dendroNetwork.txt"
+outputTopo=outputsPath * "/dendroTopology.txt"
+outputClust=outputsPath * "/dendroClusters.txt"
+outputClustPlot=outputsPath * "/dendroClusters.png"
+outputClustOp=outputsPath * "/dendroClustersOptimal.txt"
+outputClustOpPlot=outputsPath * "/dendroClustersOptimal.png"
 
 #Retrieve species list
 nameDF=CSV.read(inputNames, header=false)
@@ -66,12 +79,12 @@ end
 distDF=DataFrame(distMat)
 CSV.write(outputDist, DataFrame(distMat), header=nameList)
 
-#Infer tree using neighbor joining
-println("Inferring phylogenetic tree...")
+#Infer dendrogram using neighbor joining
+println("Performing neighbor joining...")
 distCSV=CSV.read(outputDist, header=true)
 resultTree=nj(distCSV)
 
-#Write tree to text file
+#Write dendrogram to text file
 io=open(outputPhylo, "w")
 println(io, resultTree)
 close(io)
@@ -81,3 +94,22 @@ resultNet=writeTopology(resultTree)
 io=open(outputTopo, "w")
 println(io, resultTree)
 close(io)
+
+#Infer dendrogram using heirarchical clustering
+println("Performing heirarchical clustering...")
+resultClust=hclust(distMat)
+resultClustOp=hclust(distMat, branchorder=:optimal)
+
+#Write cluster results to text file
+io=open(outputClust, "w")
+println(io, resultClust)
+close(io)
+io=open(outputClustOp, "w")
+println(io, resultClustOp)
+close(io)
+
+#Plot clustering dendrograms
+plotClust=plot(resultClust)
+savefig(plotClust,outputClustPlot)
+plotClustOp=plot(resultClustOp)
+savefig(plotClustOp,outputClustPlot)
