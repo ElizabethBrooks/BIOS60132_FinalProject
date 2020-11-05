@@ -63,7 +63,6 @@ for i in 1:numSpecies
 end
 
 #Output distance matrix to CSV
-println("Writting distance matrix to CSV...")
 distDF=DataFrame(distMat)
 CSV.write(outputDist, DataFrame(distMat), header=nameList)
 
