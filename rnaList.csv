@@ -7,5 +7,12 @@ DaphniaPA,/afs/crc.nd.edu/group/pfrenderlab/mendel/ebrooks/rnaseq/trimmed_run1PA
 DaphniaSierra,/afs/crc.nd.edu/group/pfrenderlab/mendel/ebrooks/rnaseq/trimmed_run1Sierra_assemblyTrinity/Trinity.fasta
 DaphniaMagna,../Data/GCF_003990815.1_ASM399081v1_rna.fna
 DrosophilaMelanogaster,../Data/GCF_000001215.4_Release_6_plus_ISO1_MT_rna.fna
+AnophelesGambiae,../Data/GCF_000005575.2_AgamP3_rna.fna
 AedesAegypti,../Data/GCF_002204515.2_AaegL5.0_rna.fna
 BombyxMori,../Data/GCF_000151625.1_ASM15162v1_rna.fna
+TriboliumCastaneum,../Data/GCF_000002335.3_Tcas5.2_rna.fna
+ApisMellifera,../Data/GCF_003254395.2_Amel_HAv3.1_rna.fna
+NasoniaVitripennis,../Data/GCF_009193385.2_Nvit_psr_1.1_rna.fna
+AcyrthosiphonPisum,../Data/GCF_005508785.1_pea_aphid_22Mar2018_4r6ur_rna.fna
+PediculusHumanus,../Data/GCF_000006295.1_JCVI_LOUSE_1.0_rna.fna
+IxodesScapularis,../Data/GCF_002892825.2_ISE6_asm2.2_deduplicated_rna.fna
