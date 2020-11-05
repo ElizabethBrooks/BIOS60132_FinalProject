@@ -24,17 +24,18 @@ outputPhylo=ARGS[5]
 outputTopo=ARGS[6]
 
 #Retrieve species list
-nameDF=CSV.read(inputNames, DataFrame, header=false)
+nameDF=CSV.read(inputNames, header=false)
 nameMatrix=convert(Matrix, nameDF)
 numSpecies=size(nameMatrix, 1)
 
 #Initialize data vectors
 readList=Array{BioSequences.FASTA.Reader}(undef,numSpecies)
 sketchList=Array{MinHashSketch}(undef,numSpecies)
-names=Array{String}(undef,numSpecies)
+nameList=Array{String}(undef,numSpecies)
 distMat=zeros(numSpecies,numSpecies)
 
 #Sketch FASTA files
+nameList[1]="species"
 for i in 1:numSpecies
 	#Read input FASTA files
 	println("Reading FASTA file ", nameMatrix[i,2])
@@ -45,7 +46,7 @@ for i in 1:numSpecies
 	sketch=minhash(reads, merSize, sketchSize)
 	sketchList[i]=sketch
 	#Create name vector for header
-	names[i]=nameMatrix[i,1]
+	nameList[i]=nameMatrix[i,1]
 end
 
 #Calculate pair-wise Jaccard distances
@@ -64,11 +65,11 @@ end
 #Output distance matrix to CSV
 println("Writting distance matrix to CSV...")
 distDF=DataFrame(distMat)
-CSV.write(outputDist, distDF, header=names)
+CSV.write(outputDist, DataFrame(distMat), header=nameList)
 
 #Infer tree using neighbor joining
 println("Inferring phylogenetic tree...")
-distCSV=CSV.read(outputDist, DataFrame, header=true)
+distCSV=CSV.read(outputDist, header=true)
 resultTree=nj(distCSV)
 
 #Write tree to text file
@@ -77,6 +78,7 @@ println(io, resultTree)
 close(io)
 
 #Write topology to text file
-io=open(outputTopo, "w")
 resultNet=writeTopology(resultTree)
+io=open(outputTopo, "w")
+println(io, resultTree)
 close(io)
