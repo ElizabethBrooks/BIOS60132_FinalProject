@@ -8,7 +8,11 @@
 #Pkg.add("PhyloNetworks")
 #Pkg.add("Clustering")
 #Pkg.add("PhyloTrees")
-#Pkg.add("StatsPlots")
+#Pkg.add("Plots")
+
+#Ensure GR run-time is up-to-date, if necessary
+#ENV["GRDIR"] = ""
+#Pkg.build("GR")
 
 #Load packages
 println("Importing packages...")
@@ -19,7 +23,8 @@ using CSV
 using PhyloNetworks
 using Clustering
 using PhyloTrees
-using StatsPlots
+using Plots
+plotly()
 
 #Retrieve inputs
 merSize=parse(Int, ARGS[1])
@@ -68,7 +73,7 @@ for i in 1:numSpecies
 	for j in 1:numSpecies
 		if i < j
 			#Determine jaccard distance
-			dist=distance(Jaccard, sketchList[i], sketchList[j])
+			dist=GeneticVariation.distance(Jaccard, sketchList[i], sketchList[j])
 			distMat[i,j]=1-dist
 			distMat[j,i]=1-dist
 		end
@@ -109,7 +114,7 @@ println(io, resultClustOp)
 close(io)
 
 #Plot clustering dendrograms
-plotClust=plot(resultClust)
-savefig(plotClust,outputClustPlot)
-plotClustOp=plot(resultClustOp)
-savefig(plotClustOp,outputClustPlot)
+plotClust=StatsPlots.plot(resultClust)
+Plots.png(outputClustPlot)
+plotClustOp=StatsPlots.plot(resultClustOp)
+Plots.png(outputClustPlot)
