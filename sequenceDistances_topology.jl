@@ -10,10 +10,9 @@
 #Pkg.add("PhyloTrees")
 #Pkg.add("StatsPlots")
 #Pkg.add("ORCA")
-#Pkg.add("PlotlyJS")
 
 #Ensure GR run-time is up-to-date, if necessary
-#ENV["GRDIR"] = ""
+#ENV["GKSwstype"] = "100"
 #Pkg.build("GR")
 
 #Load packages
@@ -26,8 +25,6 @@ using PhyloNetworks
 using Clustering
 using PhyloTrees
 using StatsPlots
-using PlotlyJS
-plotly()
 
 #Retrieve inputs
 merSize=parse(Int, ARGS[1])
@@ -101,7 +98,7 @@ resultClust=hclust(distMat)
 resultClustOp=hclust(distMat, branchorder=:optimal)
 
 #Plot clustering dendrograms
-plotClust=StatsPlots.plot(resultClust)
-PlotlyJS.savefig(plotClust,outputClustPlot)
-plotClustOp=StatsPlots.plot(resultClustOp)
-PlotlyJS.savefig(plotClustOp,outputClustOpPlot)
+plotClust=plot(resultClust)
+savefig(plotClust,outputClustPlot)
+plotClustOp=plot(resultClustOp)
+savefig(plotClustOp,outputClustOpPlot)

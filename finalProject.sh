@@ -15,7 +15,7 @@ target=$3 #genomic or rna
 merSize=16
 sketchSize=400
 inputNames=$target"List.csv"
-outputsPath="../Data/Results_FinalProject/run3/"$target"_k"$merSize"s"$sketchSize
+outputsPath="../Data/Results_FinalProject/run4/"$target"_k"$merSize"s"$sketchSize
 
 #Make outputs directory
 mkdir $outputsPath
