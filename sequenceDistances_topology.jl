@@ -37,11 +37,8 @@ outputsPath=ARGS[4]
 
 #Set output paths
 outputDist=outputsPath * "/distanceMatrix.csv"
-outputPhylo=outputsPath * "/dendroNetwork.txt"
 outputTopo=outputsPath * "/dendroTopology.txt"
-outputClust=outputsPath * "/dendroClusters.txt"
 outputClustPlot=outputsPath * "/dendroClusters.png"
-outputClustOp=outputsPath * "/dendroClustersOptimal.txt"
 outputClustOpPlot=outputsPath * "/dendroClustersOptimal.png"
 
 #Retrieve species list
@@ -92,11 +89,6 @@ println("Performing neighbor joining...")
 distCSV=CSV.read(outputDist, header=true)
 resultTree=nj(distCSV)
 
-#Write dendrogram to text file
-io=open(outputPhylo, "w")
-println(io, resultTree)
-close(io)
-
 #Write topology to text file
 resultNet=writeTopology(resultTree)
 io=open(outputTopo, "w")
@@ -107,14 +99,6 @@ close(io)
 println("Performing heirarchical clustering...")
 resultClust=hclust(distMat)
 resultClustOp=hclust(distMat, branchorder=:optimal)
-
-#Write cluster results to text file
-io=open(outputClust, "w")
-println(io, resultClust)
-close(io)
-io=open(outputClustOp, "w")
-println(io, resultClustOp)
-close(io)
 
 #Plot clustering dendrograms
 plotClust=StatsPlots.plot(resultClust)
