@@ -92,8 +92,8 @@ io=open(outputTopo, "w")
 println(io, resultTree)
 close(io)
 
-#Infer dendrogram using heirarchical clustering
-println("Performing heirarchical clustering...")
+#Infer dendrogram using hierarchical clustering
+println("Performing hierarchical clustering...")
 resultClust=hclust(distMat)
 resultClustOp=hclust(distMat, branchorder=:optimal)
 
