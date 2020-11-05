@@ -12,8 +12,8 @@ sketch=$2 #400 or 1000
 target=$3 #genomic or rna
 
 #Set inputs for julia script
-merSize=16
-sketchSize=400
+merSize=$mer
+sketchSize=$sketch
 inputNames=$target"List.csv"
 outputsPath="../Data/Results_FinalProject/run4/"$target"_k"$merSize"s"$sketchSize
 

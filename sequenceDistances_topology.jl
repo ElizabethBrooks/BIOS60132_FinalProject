@@ -12,7 +12,7 @@
 #Pkg.add("ORCA")
 
 #Ensure GR run-time is up-to-date, if necessary
-#ENV["GKSwstype"] = "100"
+ENV["GKSwstype"] = "100"
 #Pkg.build("GR")
 
 #Load packages
