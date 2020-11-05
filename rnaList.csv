@@ -6,3 +6,4 @@ R2,/afs/crc.nd.edu/group/pfrenderlab/mendel/ebrooks/rnaseq/trimmed_run1R2_assemb
 PA,/afs/crc.nd.edu/group/pfrenderlab/mendel/ebrooks/rnaseq/trimmed_run1PA_assemblyTrinity/Trinity.fasta
 Sierra,/afs/crc.nd.edu/group/pfrenderlab/mendel/ebrooks/rnaseq/trimmed_run1Sierra_assemblyTrinity/Trinity.fasta
 Magna,../Data/GCF_003990815.1_ASM399081v1_rna.fna
+Melanogaster,../Data/GCF_000001215.4_Release_6_plus_ISO1_MT_rna.fna
