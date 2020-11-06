@@ -7,7 +7,7 @@ DrosophilaMelanogaster,../Data/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fn
 DrosophilaPseudoobscura,../Data/GCF_009870125.1_UCI_Dpse_MV25_genomic.fna
 DrosophilaMojavensis,../Data/GCF_000005175.2_dmoj_caf1_genomic.fna
 AnophelesGambiae,../Data/GCF_000005575.2_AgamP3_genomic.fna
-CulexQuinquefasciatus,,../Data/GCF_000209185.1_CulPip1.0_genomic.fna
+CulexQuinquefasciatus,../Data/GCF_000209185.1_CulPip1.0_genomic.fna
 AedesAegypti,../Data/GCF_002204515.2_AaegL5.0_genomic.fna
 BombyxMori,../Data/GCF_000151625.1_ASM15162v1_genomic.fna
 TriboliumCastaneum,../Data/GCF_000002335.3_Tcas5.2_genomic.fna
