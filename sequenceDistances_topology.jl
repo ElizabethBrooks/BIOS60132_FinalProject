@@ -89,7 +89,7 @@ resultTree=nj(distCSV)
 #Write topology to text file
 resultNet=writeTopology(resultTree)
 io=open(outputTopo, "w")
-println(io, resultTree)
+println(io, resultNet)
 close(io)
 
 #Infer dendrogram using hierarchical clustering
