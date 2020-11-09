@@ -96,12 +96,12 @@ close(io)
 println("Performing hierarchical clustering...")
 resultClust=hclust(distMat)
 #Plot the dendrogam
-plotClust=plot(resultClust, xticks=(1:n, ["$i" for i in eachindex(nameList)]))
+plotClust=plot(resultClust, xticks=(1:numSpecies, ["$v" for (i,v) in enumerate(nameList)]))
 savefig(plotClust,outputClustPlot)
 
 #Infer optimal dendrogram to minimize
 # the distance between neighboring leaves
 resultClustOp=hclust(distMat, branchorder=:optimal)
 #Plot the dendrogam
-plotClustOp=plot(resultClustOp, xticks=(1:n, ["$i" for i in eachindex(nameList)]))
+plotClustOp=plot(resultClustOp, xticks=(1:numSpecies, ["$v" for (i,v) in enumerate(nameList)]))
 savefig(plotClustOp,outputClustOpPlot)
