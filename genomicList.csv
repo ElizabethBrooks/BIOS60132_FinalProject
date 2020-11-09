@@ -5,7 +5,6 @@ DaphniaCarinata,../Data/GCA_013167095.1_ASM1316709v1_genomic.fna
 DaphniaMagna1,../Data/GCF_003990815.1_ASM399081v1_genomic.fna
 DaphniaMagna2.4,../Data/GCA_001632505.1_daphmag2.4_genomic.fna
 DaphniaDubia,../Data/GCA_013387435.1_dubia_v0.01_genomic.fna
-DaphniaPulicaria,../Data/daphnia_pulicaria_TRO_genome_reads_2004.fasta
 DrosophilaMelanogaster,../Data/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna
 DrosophilaPseudoobscura,../Data/GCF_009870125.1_UCI_Dpse_MV25_genomic.fna
 DrosophilaMojavensis,../Data/GCF_000005175.2_dmoj_caf1_genomic.fna

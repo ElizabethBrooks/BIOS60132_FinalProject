@@ -37,6 +37,8 @@ outputDist=outputsPath * "/distanceMatrix.csv"
 outputTopo=outputsPath * "/dendroTopology.txt"
 outputClustPlot=outputsPath * "/dendroClusters.png"
 outputClustOpPlot=outputsPath * "/dendroClustersOptimal.png"
+outputClustPlot=outputsPath * "/dendroHeatMap.png"
+outputClustOpPlot=outputsPath * "/dendroHeatMapOptimal.png"
 
 #Retrieve species list
 nameDF=CSV.read(inputNames, header=false)
@@ -95,10 +97,27 @@ close(io)
 #Infer dendrogram using hierarchical clustering
 println("Performing hierarchical clustering...")
 resultClust=hclust(distMat)
-resultClustOp=hclust(distMat, branchorder=:optimal)
-
-#Plot clustering dendrograms
+#Plot the dendrogam
 plotClust=plot(resultClust)
 savefig(plotClust,outputClustPlot)
+#Plot the dendrogram with a heat map
+plotHeat=plot(
+    plot(resultClust, xticks=false),
+    heatmap(mat[:, resultClust.order], colorbar=false, xticks=(1:n, ["$i" for i in resultClust.order])),
+    layout=grid(2,1, heights=[0.2,0.8])
+    )
+savefig(plotHeat,outputHeatPlot)
+
+#Infer optimal dendrogram to minimize
+# the distance between neighboring leaves
+resultClustOp=hclust(distMat, branchorder=:optimal)
+#Plot the dendrogam
 plotClustOp=plot(resultClustOp)
 savefig(plotClustOp,outputClustOpPlot)
+#Plot the dendrogram with a heat map
+plotHeatOp=plot(
+    plot(resultClustOp, xticks=false),
+    heatmap(mat[:, resultClustOp.order], colorbar=false, xticks=(1:n, ["$i" for i in resultClustOp.order])),
+    layout=grid(2,1, heights=[0.2,0.8])
+    )
+savefig(plotHeatOp,outputHeatOpPlot)
