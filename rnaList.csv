@@ -8,6 +8,7 @@ DaphniaSierra,/afs/crc.nd.edu/group/pfrenderlab/mendel/ebrooks/rnaseq/trimmed_ru
 DaphniaMagna1,../Data/GCF_003990815.1_ASM399081v1_rna.fna
 DaphniaGaleata,../Data/tsa_hafn01_inv.mrna.fasta
 DaphniaSimiloides,../Data/evg1dapsim.mrna_pub.fa
+PenaeusVannamei,../Data/GCF_003789085.1_ASM378908v1_rna.fna
 DrosophilaMelanogaster,../Data/GCF_000001215.4_Release_6_plus_ISO1_MT_rna.fna
 DrosophilaPseudoobscura,../Data/GCF_009870125.1_UCI_Dpse_MV25_rna.fna
 DrosophilaMojavensis,../Data/GCF_000005175.2_dmoj_caf1_rna.fna
@@ -21,5 +22,4 @@ NasoniaVitripennis,../Data/GCF_009193385.2_Nvit_psr_1.1_rna.fna
 AcyrthosiphonPisum,../Data/GCF_005508785.1_pea_aphid_22Mar2018_4r6ur_rna.fna
 PediculusHumanus,../Data/GCF_000006295.1_JCVI_LOUSE_1.0_rna.fna
 IxodesScapularis,../Data/GCF_002892825.2_ISE6_asm2.2_deduplicated_rna.fna
-PenaeusVannamei,../Data/GCF_003789085.1_ASM378908v1_rna.fna
 TetranychusUrticae,../Data/GCF_000239435.1_ASM23943v1_rna.fna

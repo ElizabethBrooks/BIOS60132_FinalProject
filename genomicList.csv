@@ -5,6 +5,8 @@ DaphniaCarinata,../Data/GCA_013167095.1_ASM1316709v1_genomic.fna
 DaphniaMagna1,../Data/GCF_003990815.1_ASM399081v1_genomic.fna
 DaphniaMagna2.4,../Data/GCA_001632505.1_daphmag2.4_genomic.fna
 DaphniaDubia,../Data/GCA_013387435.1_dubia_v0.01_genomic.fna
+PenaeusVannamei,../Data/GCF_003789085.1_ASM378908v1_genomic.fna
+PenaeusMonodon,../Data/GCA_007890405.1_Pmod26D_v1_genomic.fna
 DrosophilaMelanogaster,../Data/GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna
 DrosophilaPseudoobscura,../Data/GCF_009870125.1_UCI_Dpse_MV25_genomic.fna
 DrosophilaMojavensis,../Data/GCF_000005175.2_dmoj_caf1_genomic.fna
@@ -19,6 +21,4 @@ RhodniusProlixus,../Data/GCA_000181055.3_Rhodnius_prolixus-3.0.3_genomic.fna
 AcyrthosiphonPisum,../Data/GCF_005508785.1_pea_aphid_22Mar2018_4r6ur_genomic.fna
 PediculusHumanus,../Data/GCF_000006295.1_JCVI_LOUSE_1.0_genomic.fna
 IxodesScapularis,../Data/GCF_002892825.2_ISE6_asm2.2_deduplicated_genomic.fna
-PenaeusVannamei,../Data/GCF_003789085.1_ASM378908v1_genomic.fna
-PenaeusMonodon,../Data/GCA_007890405.1_Pmod26D_v1_genomic.fna
 TetranychusUrticae,../Data/GCF_000239435.1_ASM23943v1_genomic.fna
