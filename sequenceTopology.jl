@@ -10,7 +10,6 @@ import Pkg
 Pkg.activate("MASHP")
 
 #Add necessary packages
-#Pkg.add("Bio")
 #Pkg.add("DataFrames")
 #Pkg.add("CSV")
 #Pkg.add("PhyloNetworks")
@@ -25,8 +24,6 @@ ENV["GKSwstype"] = "100"
 #Load packages
 println("Importing packages...")
 import MASHP
-using Bio.Seq
-using Bio.Var
 using DataFrames
 using CSV
 using PhyloNetworks
@@ -54,15 +51,20 @@ numSpecies=size(nameMatrix, 1)
 # and estimate Jaccard distances and write to CSV
 resultJD=MASHP.minJD(nameDF,nameMatrix,numSpecies,outputDist)
 
-#Call function to infer dendrogram using neighbor joining
-resultNJ=MASHP.minJD(outputDist)
+#Infer dendrogram using neighbor joining
+println("Performing neighbor joining...")
+distCSV=CSV.read(outputDist, header=true)
+resultTree=nj(distCSV)
+#Generate topology network
+resultNJ=writeTopology(resultTree)
 #Write topology to text file
 io=open(outputTopo, "w")
 println(io, resultNJ)
 close(io)
 
-#Call function to infer dendrogram using hierarchical clustering
-resultUPGMA=MASHP.minUPGMA(resultJD)
+#Infer optimal dendrogram to minimize
+# the distance between neighboring leaves
+resultUPGMA=hclust(distMat, branchorder=:optimal)
 #Plot the dendrogam with species names on x-axis
 #plotClust=plot(resultUPGMA, xticks=(1:numSpecies, ["$v" for (i,v) in enumerate(nameList)]))
 #Plot the dendrogam with species as index numbers

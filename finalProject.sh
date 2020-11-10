@@ -9,18 +9,18 @@ tar -xf MASHP.tar.gz
 #Load necessary module
 module load julia/1.4.1
 
-#Retrieve input arguments
-mer=$1 #16 or 21
-sketch=$2 #400 or 1000
-inputs=$3 #dnaList.csv or rnaList.csv
-outputs=$4 #directory for output files
+#Set input arguments for julia script
+#Default k-mer of 21 and sketch size of 1000
+# is recommended for closely related species
+merSize=21 #16 or 21
+sketchSize=1000 #400 or 1000
+inputs="rnaList.csv" #dnaList.csv or rnaList.csv
+outputs="." #directory for output files
 
-#Set inputs for julia script
-merSize=$mer #Size of k mer
-sketchSize=$sketch #Size of MASH sketch
+#Set results sub-directory path
 results=$outputs"/MASHP_k"$merSize"s"$sketchSize
 
-#Make results sub directory
+#Make results sub-directory
 mkdir $results
 
 #Run julia script
