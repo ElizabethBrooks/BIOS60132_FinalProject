@@ -39,6 +39,10 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 | Y023_5 | Visible light | 3 |
 | R2 | UVR | 3 |
 | R2 | Visible light | 3 |
+| PA | UVR | 3 |
+| PA | Visible light | 3 |
+| Sierra | UVR | 3 |
+| Sierra | Visible light | 3 |
 
 2. The well annotated PA42 *Daphnia pulex* reference coding sequences
 
