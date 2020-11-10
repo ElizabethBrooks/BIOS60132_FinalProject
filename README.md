@@ -17,7 +17,7 @@ across the genus.
 - Elizabeth Brooks
 
 ## New Code Required
-Direct mapping of the RNA-seq reads for the four *Daphnia melanica* genotypes to the reference coding sequences of the closely related species of *Daphnia pulex* to guide the generation of phylogenetic trees.
+Pair-wise comparison of the RNA-seq reads for the *Daphnia melanica* genotypes to the reference coding sequences of the closely related species of *Daphnia pulex* to guide the generation of phylogenetic trees.
 
 ## Activities Required
 1. QC, trim, and concatenate paired-end RNA-seq reads for each species
