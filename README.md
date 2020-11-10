@@ -17,12 +17,14 @@ across the genus.
 - Elizabeth Brooks
 
 ## New Code Required
-Pair-wise comparison of the RNA-seq reads for the *Daphnia melanica* genotypes to the reference coding sequences of the closely related species of *Daphnia pulex* to guide the generation of phylogenetic trees.
+Pairwise comparison of the similarity between MinHash sketches of RNA or DNA sequence read sets for each species to guide the generation of phylogenetic trees.
 
 ## Activities Required
-1. QC, trim, and concatenate paired-end RNA-seq reads for each species
+1. Prepare sets of DNA or RNA sequences for each species:
+- QC, trim, and concatenate or assemble paired-end RNA-seq reads in FASTA format
+- Download set of DNA sequences in FASTA format, for example
 2. Estimate Jaccard distances between species DNA or RNA sequnces using MinHash sketches
-3. Infer dendrograms from pair-wise distance matrix for sketches using neighbor-joining and hierarchical clustering
+3. Infer dendrograms from pairwise distance matrix using neighbor-joining (NJ) or hierarchical clustering (UPGMA)
 
 ## Data Used
 1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes (Olympic mountains, WA), two tolerant and two not-tolerant to UVR
