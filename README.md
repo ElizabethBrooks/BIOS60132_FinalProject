@@ -46,5 +46,34 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 
 2. The well annotated PA42 *Daphnia pulex* reference coding sequences
 
+3. Genomic sequences for the following arthropods downloaded from the NCBI database
+
+| Species | Common Name |
+| ------- | ----------- |
+| Daphnia pulex 3.0 | common water flea |
+| Daphnia pulex 4.1 | common water flea |
+| Daphnia pulex 1.0 | common water flea |
+| Daphnia carinata | crustaceans |
+| Daphnia magna 1 | crustaceans |
+| Daphnia magna 2.4 | crustaceans |
+| Daphnia dubia | crustaceans |
+| Penaeus vannamei | Pacific white shrimp |
+| Penaeus monodon | black tiger shrimp |
+| Drosophila melanogaster | fruit fly |
+| Drosophila pseudoobscura | flies |
+| Drosophila mojavensis | flies |
+| Anopheles gambiae | African malaria mosquito |
+| Culex quinquefasciatus | southern house mosquito |
+| Aedes aegypti | yellow fever mosquito |
+| Bombyx mori | domestic silkworm |
+| Tribolium castaneum | red flour beetle |
+| Apis mellifera | honey bee |
+| Nasonia vitripennis | jewel wasp |
+| Rhodnius prolixus | bugs |
+| Acyrthosiphon pisum | pea aphid |
+| Pediculus humanus | human body louse |
+| Ixodes scapularis | black-legged tick |
+| Tetranychus urticae | two-spotted spider mite |
+
 ## Question Asked
 How do divergent adaptive phenotypes arise in naturally subdivided populations of *Daphnia*?
