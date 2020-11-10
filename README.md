@@ -13,6 +13,9 @@ sequences of a closely related species, such as *Daphnia pulex*. Our long-term g
 on the results of this study to investigate independent adaptation to high UVR environments
 across the genus.
 
+## Question Asked
+How do divergent adaptive phenotypes arise in naturally subdivided populations of *Daphnia*?
+
 ## Team
 - Elizabeth Brooks
 
@@ -74,6 +77,3 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 | Pediculus humanus | human body louse |
 | Ixodes scapularis | black-legged tick |
 | Tetranychus urticae | two-spotted spider mite |
-
-## Question Asked
-How do divergent adaptive phenotypes arise in naturally subdivided populations of *Daphnia*?
