@@ -30,7 +30,7 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 3. Infer dendrograms from pairwise distance matrix using neighbor-joining (NJ) or hierarchical clustering (UPGMA)
 
 ## Data Used
-1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes (Olympic mountains, WA), two tolerant and two not-tolerant to UVR
+1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes from the Olympic mountains, one *Daphnia melanica* from the Sierra mountains, and one *Daphnia pulex* from the Portland Arch.
 
 | Genotype | Treatment | Replicates |
 | -------- | --------- | ---------- |
