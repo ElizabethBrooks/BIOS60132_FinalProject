@@ -30,7 +30,7 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 3. Infer dendrograms from pairwise distance matrix using neighbor-joining (NJ) or hierarchical clustering (UPGMA)
 
 ## Data Used
-1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes from the Olympic mountains, one *Daphnia melanica* from the Sierra mountains, and one *Daphnia pulex* from the Portland Arch.
+1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes from the Olympic mountains, one *Daphnia melanica* from the Sierra mountains, and one *Daphnia pulex* from the Portland Arch
 
 | Genotype | Treatment | Replicates |
 | -------- | --------- | ---------- |
@@ -49,7 +49,7 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 
 2. The well annotated PA42 *Daphnia pulex* reference coding sequences
 
-3. Genomic sequences for the following arthropods downloaded from the NCBI database
+3. Genomic sequences for 24 arthropod species (or versions) downloaded from the NCBI database
 
 | Species | Common Name |
 | ------- | ----------- |
