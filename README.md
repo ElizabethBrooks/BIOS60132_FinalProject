@@ -47,7 +47,7 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 | Sierra | UVR | 3 |
 | Sierra | Visible light | 3 |
 
-2. The well annotated PA42 *Daphnia pulex* reference coding sequences
+2. The well annotated PA42 *Daphnia pulex* reference genomic and transcript sequences
 
 3. Genomic sequences for 24 arthropod species (or versions) downloaded from the NCBI database
 
