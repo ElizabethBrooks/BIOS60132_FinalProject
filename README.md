@@ -26,7 +26,7 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 1. Prepare sets of DNA or RNA sequences for each species:
 - QC, trim, and concatenate or assemble paired-end RNA-seq reads in FASTA format
 - Download set of DNA sequences in FASTA format
-2. Estimate Jaccard distances between species DNA or RNA sequnces using MinHash sketches
+2. Estimate similarity (Jaccard distances) between species DNA or RNA sequnces using MinHash sketches
 3. Infer dendrograms from pairwise distance matrix using neighbor-joining (NJ) or hierarchical clustering (UPGMA)
 
 ## Data Used
