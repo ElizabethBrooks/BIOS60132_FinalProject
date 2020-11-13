@@ -39,8 +39,8 @@ outputsPath=ARGS[4]
 
 #Set output paths
 outputDist=outputsPath * "/distanceMatrix.csv"
-outputTopo=outputsPath * "/dendroTopology.txt"
-outputClustPlot=outputsPath * "/dendroClustersOptimal.png"
+outputTopo=outputsPath * "/dendroNJTopology.txt"
+outputClustPlot=outputsPath * "/dendroUPGMA.png"
 
 #Retrieve species list
 nameDF=CSV.read(inputNames, header=false)
@@ -49,7 +49,7 @@ numSpecies=size(nameMatrix, 1)
 
 #Call function to generate MinHash sketches
 # and estimate Jaccard distances and write to CSV
-resultJD=MASHP.minJD(nameDF,nameMatrix,numSpecies,outputDist)
+resultJD=MASHP.minJD(merSize,sketchSize,nameDF,nameMatrix,numSpecies,outputDist)
 
 #Infer dendrogram using neighbor joining
 println("Performing neighbor joining...")
@@ -64,7 +64,7 @@ close(io)
 
 #Infer optimal dendrogram to minimize
 # the distance between neighboring leaves
-resultUPGMA=hclust(distMat, branchorder=:optimal)
+resultUPGMA=hclust(resultJD, branchorder=:optimal)
 #Plot the dendrogam with species names on x-axis
 #plotClust=plot(resultUPGMA, xticks=(1:numSpecies, ["$v" for (i,v) in enumerate(nameList)]))
 #Plot the dendrogam with species as index numbers
