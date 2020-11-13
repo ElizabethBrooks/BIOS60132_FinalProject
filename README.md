@@ -6,7 +6,7 @@ levels of ultraviolet radiation (UVR). A primary goal of evolutionary biology is
 evolution of mechanisms that underlie adaptive phenotypes. Aquatic species have evolved
 three mechanisms in response to survive under harmful levels of UVR: avoidance,
 photoprotection, and dark repair. The goals of this study are to use RNA-seq data to infer
-phylogenetic trees for high and low tolerance *Daphnia melanica* genotypes. A common method is to
+phylogenetic trees for high and low tolerance *Daphnia* genotypes. A common method is to
 assemble the short reads to generate sequence contigs, which are then mapped onto reference
 transcripts. An alternative approach is to directly map the reads to the reference coding
 sequences of a closely related species, such as *Daphnia pulex*. Our long-term goal is to build
@@ -26,11 +26,11 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 1. Prepare sets of DNA or RNA sequences for each species:
 - QC, trim, and concatenate or assemble paired-end RNA-seq reads in FASTA format
 - Download set of DNA sequences in FASTA format
-2. Estimate similarity (Jaccard distances) between species DNA or RNA sequnces using MinHash sketches
+2. Rapidly estimate similarity (Jaccard distances) between species DNA or RNA sequnces using MinHash sketches
 3. Infer dendrograms from pairwise distance matrix using neighbor-joining (NJ) or hierarchical clustering (UPGMA)
 
 ## Data Used
-1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes from the Olympic mountains, one *Daphnia melanica* from the Sierra mountains, and one *Daphnia pulex* from the Portland Arch
+1. Paired-end RNA-seq reads for four *Daphnia melanica* genotypes from the Olympic mountains, a *Daphnia melanica* from the Sierra mountains, and a *Daphnia pulex* from the Portland Arch
 
 | Genotype | Treatment | Replicates |
 | -------- | --------- | ---------- |
@@ -47,7 +47,7 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 | Sierra | UVR | 3 |
 | Sierra | Visible light | 3 |
 
-2. The well annotated PA42 *Daphnia pulex* reference genomic and transcript sequences
+2. The well annotated PA42 *Daphnia pulex* reference DNA and RNA sequences
 
 3. Genomic sequences for 24 arthropod species (or versions) downloaded from the NCBI database
 
