@@ -38,8 +38,8 @@ Pairwise comparison of the similarity between MinHash sketches of RNA or DNA seq
 | E05 | Visible light | 3 |
 | Y05 | UVR | 3 |
 | Y05 | Visible light | 3 |
-| Y023_5 | UVR | 3 |
-| Y023_5 | Visible light | 3 |
+| Y023 | UVR | 3 |
+| Y023 | Visible light | 3 |
 | R2 | UVR | 3 |
 | R2 | Visible light | 3 |
 | PA | UVR | 3 |
